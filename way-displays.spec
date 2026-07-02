@@ -9,15 +9,14 @@ Source0:        https://github.com/alex-courtis/way-displays/archive/refs/tags/%
 Patch0:         tst.h.patch
 
 BuildRequires: clang
-BuildRequires: pkgconfig(wayland)
 BuildRequires: pkgconfig(wayland-protocols)
-BuildRequires: pkgconfig(wlroots)
+BuildRequires: pkgconfig(wlroots-0.20)
 BuildRequires: pkgconfig(libinput)
 BuildRequires: pkgconfig(yaml-cpp)
-BuildRequires: pkgconfig(libcmocka)
-BuildRequires: pkgconfig(libcmocka-cmake)
+BuildRequires: pkgconfig(cmocka)
+BuildRequires: libcmocka-cmake-devel
 
-Requires:       wayland
+Requires:       sway OR river OR river-classic
 
 # upstream recommends clang
 %global toolchain clang
