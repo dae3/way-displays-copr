@@ -1,17 +1,11 @@
-%global forgeurl https://github.com/alex-courtis/way-displays
-# upstream recommends clang
-%global toolchain clang
-
 Name:           way-displays
 Version:        1.15.0
 Release:        1%{?dist}
 Summary:        Auto Manage Your Wayland Displays
 
-%forgemeta
-
 License:        MIT
-URL:            %{forgeurl}
-Source0:        %{forgesource}
+URL:            https://github.com/alex-courtis/way-displays
+Source0:        https://github.com/alex-courtis/way-displays/archives/refs/tags/%{version}.tar.gz
 Patch0:         tst.h.patch
 
 BuildRequires: clang
@@ -24,6 +18,9 @@ BuildRequires: pkgconfig(libcmocka)
 BuildRequires: pkgconfig(libcmocka-cmake)
 
 Requires:       wayland
+
+# upstream recommends clang
+%global toolchain clang
 
 %description
 way-displays: Auto Manage Your Wayland Displays
@@ -39,7 +36,6 @@ credit: Stephen Barratt
 - Wayland successor to xlayoutdisplay, inspired by kanshi.
 
 %prep
-%forgesetup
 %setup -q
 %patch 0 -p1
 
