@@ -17,7 +17,7 @@ BuildRequires: pkgconfig(yaml-cpp)
 BuildRequires: pkgconfig(cmocka)
 BuildRequires: libcmocka-cmake-devel
 
-Requires:       sway OR river OR river-classic
+Requires:       (sway or river or river-classic)
 
 # upstream recommends clang
 %global toolchain clang
