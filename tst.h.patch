@@ -1,0 +1,15 @@
+# Upstream is built against cmocka 1.x, F44 packages 2.x
+
+diff -urN way-displays-1.15.0-orig/tst/tst.h way-displays-1.15.0/tst/tst.h
+--- way-displays-1.15.0-orig/tst/tst.h	2025-09-30 16:41:18.000000000 +1000
++++ way-displays-1.15.0/tst/tst.h	2026-06-28 17:35:02.047974796 +1000
+@@ -8,9 +8,6 @@
+
+ #include <cmocka.h>
+
+-// TODO: use cmocka_print_error and remove this proto once cmocka 1.1.7+ is widely available
+-void cm_print_error(const char* const format, ...) CMOCKA_PRINTF_ATTRIBUTE(1, 2);
+-
+ // print log messages, useful when debugging tests
+ #define LOG_PRINT false
+
