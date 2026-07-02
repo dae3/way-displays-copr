@@ -9,6 +9,7 @@ Source0:        https://github.com/alex-courtis/way-displays/archive/refs/tags/%
 Patch0:         tst.h.patch
 
 BuildRequires: clang
+BuildRequires: pandoc
 BuildRequires: pkgconfig(wayland-protocols)
 BuildRequires: pkgconfig(wlroots-0.20)
 BuildRequires: pkgconfig(libinput)
