@@ -5,7 +5,7 @@ Summary:        Auto Manage Your Wayland Displays
 
 License:        MIT
 URL:            https://github.com/alex-courtis/way-displays
-Source0:        https://github.com/alex-courtis/way-displays/archives/refs/tags/%{version}.tar.gz
+Source0:        https://github.com/alex-courtis/way-displays/archive/refs/tags/%{version}.tar.gz
 Patch0:         tst.h.patch
 
 BuildRequires: clang
